@@ -1,0 +1,19 @@
+def adding_report(ch):
+    i = 0
+    tot = 0
+    user_input = ""
+    item = ""
+    while (user_input.upper().startswith("Q") != True) or (user_input.upper() != "Q") or (user_input.isdigit() == False):
+        user_input = input("Enter an integer or 'Q': ")
+        if (user_input.lower().startswith("q") == True) or (user_input.lower() == "q"):
+            break
+        else:
+            item = item + "\n" + user_input
+            tot = tot + int(user_input)
+            i = i + 1          
+    if ch == "A":
+        print("Items\n", item) 
+        print("Total\n", tot) 
+    elif ch == "T": 
+        print("Total\n", tot)
+adding_report("T")
